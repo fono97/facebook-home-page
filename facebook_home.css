@@ -180,6 +180,7 @@ select {
 body {
   background-color: #e9ebee;
   box-sizing: border-box;
+  width: 100%;
   direction: ltr;
   line-height: 1.34;
   font-family: Helvetica, Arial, sans-serif;
@@ -188,8 +189,10 @@ body {
 }
 .site {
   display: grid;
+  max-width: 100vw;
   width: 100%;
   grid-template-columns: 25% 30% 31% 14%;
+
   grid-template-rows: 40px auto;
   grid-template-areas:
     "index-header index-header index-header index-header"
@@ -198,7 +201,7 @@ body {
 /* star the style regarding the header/computer-version */
 header.mobile-version {
   grid-area: index-header-mv;
-  width: 100%;
+  width: 100vw;
 }
 div.container-mobile-version {
   display: flex;
@@ -207,43 +210,47 @@ div.container-mobile-version {
 }
 div.logo-button {
   display: flex;
-  width: 95%;
-  margin: 0 auto;
+  width: 92%;
+  margin: 10px auto 0;
   justify-content: space-between;
 }
 .facebook-logo {
   color: #4267b2;
   font-weight: bold;
+  text-transform: capitalize;
   font-size: 25px;
 }
 div.icon-header {
   display: flex;
-  justify-content: space-between;
+  place-items: center;
 }
 div.icon-header i {
   background-color: lightgray;
   border-radius: 50%;
   font-size: 15px;
 }
+
 nav ul.mobile-version-icons {
   display: flex;
-  width: 90%;
-  margin: 0 auto;
+  width: 92%;
+  margin: 0.3rem auto 0;
   justify-content: space-between;
 }
-nav ul.mobile-version-icons i {
-  color: #fff;
+nav ul.mobile-version-icons li {
+  color: orange;
+}
+nav ul.mobile-version-icons li {
+  color: #4267b2;
+  display: block;
   opacity: 1;
   font-size: 20px;
 }
-nav ul.mobile-version-icons i.facebook {
-  color: #4267b2;
-}
+
 nav ul.mobile-version-icons i.justify {
   color: black;
 }
-/* endthe style regarding the header/computer-version */
 
+/* start of the style computer version */
 header.computer-version {
   grid-area: index-header;
   width: 100%;
@@ -329,7 +336,7 @@ main {
   grid-area: index-content;
   margin-top: 4%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: 40px 100px auto auto;
   grid-template-areas:
     "index-main-1"
@@ -356,6 +363,7 @@ div.main-1 p {
 }
 div.main-2 {
   grid-area: index-main-2;
+  width: 100%;
 }
 div.main-2 .picture-main {
   width: 100%;
@@ -364,22 +372,23 @@ div.main-2 .picture-main {
 }
 div.main-2 .picture-main input {
   position: relative;
+  display: block;
   width: 100%;
-  height: 130px;
+  height: 128px;
   border: none;
   outline: none;
   background-color: #fff;
   display: block;
-  text-indent: 15%;
+  text-indent: 20%;
 }
 div.main-2 .picture-main input.second-input::placeholder {
   position: absolute;
-  top: 25%;
+  top: 70%;
   font-size: 15px;
   background-color: transparent;
   padding-bottom: 3%;
-  border-bottom: thin ridge #111;
-  width: 80%;
+  border-bottom: 1px solid #111;
+  width: 100%;
 }
 
 div.main-2 .picture-main p.box-image {
@@ -1067,8 +1076,8 @@ header.mobile-version {
 }
 @media only screen and (max-width: 1000px) {
   .site {
-    display: grid;
     width: 100vw;
+    display: grid;
     grid-template-columns: auto;
     grid-template-rows: 40px auto;
     grid-template-areas:
@@ -1076,27 +1085,35 @@ header.mobile-version {
       " index-content";
   }
   main {
-    width: 100vw;
-  }
-  header.mobile-version {
     width: 100%;
   }
+  /* header.mobile-version {
+    width: 100%;
+  } */
   .main-1 {
     display: none;
   }
+  div.main-2 .picture-main input.second-input::placeholder {
+    position: absolute;
+    top: 70%;
+    font-size: 15px;
+    background-color: transparent;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #111;
+    width: 100%;
+  }
   .picture-main-3 {
-    display:grid;
-    grid-template-rows:auto;
-    grid-template-columns:auto auto auto auto;
-    gap:.5rem .5rem;
-  
-    
-    width: 95vw;
-    margin:0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.5rem 0.5rem;
+    width: 96vw;
+    margin: 0 auto;
   }
   aside.sidebar {
     display: none;
   }
+
   aside.ad {
     display: none;
   }
@@ -1107,6 +1124,7 @@ header.mobile-version {
     display: none;
   }
   header.mobile-version {
-    display: block;
+    display: flex;
+    width: 100vw;
   }
 }
