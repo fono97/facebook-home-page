@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "name": "codingPhase",
+      "src": "images/codingphase-joe.jpg"
+    },
+    {
+      " name": "joma",
+      "src": " images/joma-tech.jpg"
+    },
+    {
+      " name": "chris sean",
+      "src": "images/chris-sean.jpg"
+    },
+    {
+      " name": "Gabriel",
+      "src": "images/andy.jpg"
+    },
+    {
+      " name": "cs dojo",
+      "src": "images/Hey-YK.jpg"
+    },
+    {
+      " name": "tech lead",
+      "src": "images/techlead.jpg"
+    },
+    {
+      " name": "telmo",
+      "src": "images/telmo.jpg"
+    },
+    {
+      " name": "erik",
+      "src": "images/erik.jpg"
+    },
+    {
+      " name": "pixel",
+      "src": "images/PIXEL.png"
+    },
+    {
+      " name": "chris hawkes",
+      "src": "images/chris-hawkes.jpg"
+    },
+    {
+      " name": "Dave-xiang",
+      "src": "images/Dave-Xiang.jpg"
+    },
+    {
+      " name": "stefan",
+      "src": "images/Stefan.jpg"
+    },
+    {
+      " name": "chris jereza",
+      "src": "images/Chris-Jereza.jpg"
+    }
+  ]
+}
