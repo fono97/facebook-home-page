@@ -199,8 +199,6 @@ body {
 header.mobile-version {
   grid-area: index-header-mv;
   width: 100%;
-}
-div.container-mobile-version {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -334,7 +332,7 @@ main {
   margin-top: 4%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 40px 100px auto auto;
+  grid-template-rows: 50px 100px auto auto;
   grid-template-areas:
     "index-main-1"
     "index-main-2"
@@ -348,7 +346,11 @@ div.main-1 {
   font-family: catamaran;
   font-weight: bold;
   border: thin ridge #fff;
-  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
   color: #111;
 }
 div.main-1 p {
@@ -380,11 +382,11 @@ div.main-2 .picture-main input {
 }
 div.main-2 .picture-main input.second-input::placeholder {
   position: absolute;
-  top: 70%;
+  top: 43%;
   font-size: 15px;
   background-color: transparent;
   padding-bottom: 3%;
-  border-bottom: 1px solid #111;
+  /* border-bottom: 1px solid #111; */
   width: 100%;
 }
 
@@ -399,10 +401,25 @@ div.main-2 .picture-main p.box-image img {
   border-radius: 50%;
   height: 50px;
 }
+/*  */
+/* .div.main-2 .emotion {
+  position:absolute;
+  top: 50%;
+  left:10%;
+  width:100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin-left: 3%;
+  padding: 5px 8px;
+  border-radius: 20px;
+} */
 div.main-2 .position-in-bottom {
   position: absolute;
-  top: 75%;
+  top: 72%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
   margin-left: 3%;
@@ -410,15 +427,14 @@ div.main-2 .position-in-bottom {
   border-radius: 20px;
 }
 div.main-2 .position-in-bottom:nth-last-child(2) {
-  transform: translateX(110%);
-  color: blue;
+  transform: translateX(150%);
+  /* color: blue; */
 }
 div.main-2 .position-in-bottom:nth-last-child(3) {
-  transform: translateX(200%);
-  color: yellow;
+  transform: translateX(235%);
+  /* color: yellow; */
 }
-
-div.main-2 .position-in-bottom i {
+*/ div.main-2 .position-in-bottom i {
   font-size: 15px;
 }
 div.main-2 .position-in-bottom p {
@@ -447,15 +463,18 @@ div.picture-main-3 {
   padding: 5px 0;
   justify-content: space-between;
 }
-.stories-pages ul.see-everything li.stories {
+.stories-pages ul.see-everything li {
+  font-size: 16px;
+}
+.stories-pages ul.see-everything li:nth-child(1) {
   color: black;
 }
-.stories-pages ul.see-everything li.see-all {
+.stories-pages ul.see-everything li:nth-child(2) {
   color: #385898;
 }
 
 .box-image-3 {
-  width: 113px;
+  width: 100px;
   display: flex;
   justify-content: center;
 }
@@ -464,7 +483,7 @@ div.picture-main-3 {
   border-radius: 10px;
   height: 201px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 .box-image-3 img:hover {
   width: 102%;
@@ -499,6 +518,7 @@ p.name-2 {
 .symbol-2 {
   position: absolute;
   width: 35px;
+  /* height: 35px; */
   top: 10px;
   left: 137px;
   font-family: catamaran;
@@ -565,6 +585,7 @@ p.symbol-4 img {
 div.main-4 {
   grid-area: index-main-4;
   background-color: white;
+  margin-bottom: 2rem;
 }
 div.general-main-4 {
   display: flex;
@@ -605,8 +626,11 @@ div.main-4-hours {
   align-items: center;
 }
 div.codingphase p {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
+  font-size:15px;
+  color:black;
+  line-height:29px;
 }
 div.codingphase div.codingphase-container {
   width: 100%;
@@ -829,7 +853,7 @@ div.text {
 }
 
 /* start of every style regarding the main section */
-/* start of every style regarding the main section */
+/* start of every style regarding the ad section */
 aside.ad {
   grid-area: index-ad;
   margin: 4% 40% 0 5%;
