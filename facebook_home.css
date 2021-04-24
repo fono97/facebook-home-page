@@ -1,10 +1,4 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
+
 
 html,
 body,
@@ -179,16 +173,23 @@ select {
   box-sizing: border-box;
 }
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #e9ebee;
   width: 100%;
   line-height: 1.34;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
+  margin: 0 auto;
 }
 .site {
+  /* background: red; */
   display: grid;
   width: 100%;
+  margin: 0 auto;
   grid-template-columns: 25% 30% 31% 14%;
+  /* grid-template-columns: 25vw 30vw 31vw 14vw; */
   grid-template-rows: 40px auto;
   grid-template-areas:
     "index-header index-header index-header index-header"
@@ -611,11 +612,13 @@ div.main-4-hours {
   align-items: center;
 }
 div.codingphase p {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   font-size: 15px;
   color: black;
   line-height: 29px;
+  text-align: justify;
+  /* text-justify: inter-word; */
 }
 div.codingphase div.codingphase-container {
   width: 100%;
@@ -841,7 +844,7 @@ div.text {
 /* start of every style regarding the ad section */
 aside.ad {
   grid-area: index-ad;
-  margin: 4% 40% 0 5%;
+  margin: 4% 10% 0 5%;
 }
 div.advertising-section {
   padding: 5% 0;
@@ -1081,22 +1084,27 @@ header.mobile-version {
   display: none;
 }
 @media only screen and (max-width: 1000px) {
+  body {
+    width: 100vw;
+  }
   .site {
+    width: 100vw;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 80px auto;
     grid-template-areas:
       "index-header-mv "
-      " index-content";
+      " index-content ";
   }
   main {
     width: 100vw;
   }
   header.mobile-version {
     width: 100vw;
+    display: flex;
   }
   .main-1 {
-    display: none;
+    padding: 0 1rem;
   }
 
   .picture-main-3 {
@@ -1104,7 +1112,7 @@ header.mobile-version {
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
     gap: 0.5rem 0.5rem;
-    width: 96vw;
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -1170,9 +1178,5 @@ header.mobile-version {
   }
   aside.connection {
     display: none;
-  }
-  header.mobile-version {
-    display: flex;
-    width: 100%;
   }
 }
