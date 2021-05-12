@@ -1,5 +1,3 @@
-
-
 html,
 body,
 div,
@@ -177,11 +175,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #e9ebee;
-  width: 100%;
+  width: 100vw;
   line-height: 1.34;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
-  margin: 0 auto;
+ 
 }
 .site {
   /* background: red; */
@@ -1086,6 +1084,7 @@ header.mobile-version {
 @media only screen and (max-width: 1000px) {
   body {
     width: 100vw;
+    overflow-x: hidden !important;
   }
   .site {
     width: 100vw;
